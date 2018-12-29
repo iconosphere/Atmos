@@ -29,11 +29,13 @@ public class MainFragment extends Fragment {
         ViewGroup rootView = (ViewGroup) inflater.inflate(R.layout.main_fragment, container, false);
 
         Button buttonEducation = rootView.findViewById(R.id.button_education);
+
         buttonEducation.setOnClickListener(view -> {
             FragmentManager fragmentManager = getFragmentManager();
             fragmentManager.beginTransaction().replace(R.id
                     .fragment_container, new EducationFragment()).commit();
         });
+
         return rootView;
     }
 
