@@ -14,6 +14,8 @@ import androidx.fragment.app.FragmentStatePagerAdapter;
 import androidx.viewpager.widget.PagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
+import com.tbuonomo.viewpagerdotsindicator.SpringDotsIndicator;
+
 public class ViewPagerEducationDiffuser extends Fragment {
     public ViewPagerEducationDiffuser() {
 
@@ -39,9 +41,11 @@ public class ViewPagerEducationDiffuser extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         ViewGroup rootView = (ViewGroup) inflater.inflate(R.layout.viewpagerhost, container, false);
         ((AppCompatActivity)getActivity()).getSupportActionBar().hide();
+        SpringDotsIndicator springDotsIndicator = rootView.findViewById(R.id.spring_dots_indicator);
         mPager = rootView.findViewById(R.id.viewpager);
         mPagerAdapter = new ScreenSlidePagerAdapter(getChildFragmentManager());
         mPager.setAdapter(mPagerAdapter);
+        springDotsIndicator.setViewPager(mPager);
         return rootView;
     }
 
