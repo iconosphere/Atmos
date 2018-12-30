@@ -15,7 +15,7 @@ public class DiffuserFragment2 extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        ViewGroup rootView = (ViewGroup) inflater.inflate(R.layout.content_education, container, false);
+        ViewGroup rootView = (ViewGroup) inflater.inflate(R.layout.education_diffuser2, container, false);
 
         return rootView;
     }
