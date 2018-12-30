@@ -39,7 +39,6 @@ public class ViewPagerEducationDiffuser extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         ViewGroup rootView = (ViewGroup) inflater.inflate(R.layout.viewpagerhost, container, false);
         ((AppCompatActivity)getActivity()).getSupportActionBar().hide();
-
         mPager = rootView.findViewById(R.id.viewpager);
         mPagerAdapter = new ScreenSlidePagerAdapter(getChildFragmentManager());
         mPager.setAdapter(mPagerAdapter);

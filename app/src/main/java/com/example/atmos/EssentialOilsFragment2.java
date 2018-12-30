@@ -15,7 +15,7 @@ public class EssentialOilsFragment2 extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        ViewGroup rootView = (ViewGroup) inflater.inflate(R.layout.content_education, container, false);
+        ViewGroup rootView = (ViewGroup) inflater.inflate(R.layout.education_essentialoils2, container, false);
 
         return rootView;
     }

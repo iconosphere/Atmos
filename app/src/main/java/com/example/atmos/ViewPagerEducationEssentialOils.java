@@ -1,8 +1,13 @@
-/*
 package com.example.atmos;
 
 import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentStatePagerAdapter;
@@ -10,56 +15,37 @@ import androidx.viewpager.widget.PagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
 public class ViewPagerEducationEssentialOils extends Fragment {
-    */
-/**
+    public ViewPagerEducationEssentialOils() {
+
+    }
+    /**
      * The number of pages (wizard steps) to show in this demo.
-     *//*
+     */
+    private static final int NUM_PAGES = 4;
 
-    private static final int NUM_PAGES = 5;
-
-    */
-/**
+    /**
      * The pager widget, which handles animation and allows swiping horizontally to access previous
      * and next wizard steps.
-     *//*
-
+     */
     private ViewPager mPager;
 
-    */
-/**
+    /**
      * The pager adapter, which provides the pages to the view pager widget.
-     *//*
-
+     */
     private PagerAdapter mPagerAdapter;
 
+    @Nullable
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_screen_slide);
+    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        ViewGroup rootView = (ViewGroup) inflater.inflate(R.layout.viewpagerhost, container, false);
+        ((AppCompatActivity)getActivity()).getSupportActionBar().hide();
 
-        // Instantiate a ViewPager and a PagerAdapter.
-        mPager = (ViewPager) findViewById(R.id.pager);
-        mPagerAdapter = new ScreenSlidePagerAdapter(getSupportFragmentManager());
+        mPager = rootView.findViewById(R.id.viewpager);
+        mPagerAdapter = new ScreenSlidePagerAdapter(getChildFragmentManager());
         mPager.setAdapter(mPagerAdapter);
+        return rootView;
     }
 
-    @Override
-    public void onBackPressed() {
-        if (mPager.getCurrentItem() == 0) {
-            // If the user is currently looking at the first step, allow the system to handle the
-            // Back button. This calls finish() on this activity and pops the back stack.
-            super.onBackPressed();
-        } else {
-            // Otherwise, select the previous step.
-            mPager.setCurrentItem(mPager.getCurrentItem() - 1);
-        }
-    }
-
-    */
-/**
-     * A simple pager adapter that represents 5 ScreenSlidePageFragment objects, in
-     * sequence.
-     *//*
 
     private class ScreenSlidePagerAdapter extends FragmentStatePagerAdapter {
         public ScreenSlidePagerAdapter(FragmentManager fm) {
@@ -87,4 +73,4 @@ public class ViewPagerEducationEssentialOils extends Fragment {
             return NUM_PAGES;
         }
     }
-}*/
+}
