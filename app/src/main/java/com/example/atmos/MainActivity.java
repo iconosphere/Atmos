@@ -43,8 +43,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         toggle.syncState();
         navigationView.setNavigationItemSelectedListener(this);
 
+        if (savedInstanceState == null){
         FragmentManager fragmentManager = getSupportFragmentManager();
-        fragmentManager.beginTransaction().add(R.id.fragment_container, new MainFragment()).commit();
+        fragmentManager.beginTransaction().add(R.id.fragment_container, new MainFragment()).commit();}
 /*        buttonEducation = findViewById(R.id.button_education);
             buttonEducation.setOnClickListener(view -> {
                 FragmentManager fragmentManager1 = getSupportFragmentManager();
