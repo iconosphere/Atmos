@@ -19,7 +19,9 @@ import androidx.drawerlayout.widget.DrawerLayout;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.view.Menu;
 import android.widget.Button;
@@ -82,6 +84,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             return true;
         }
 
+
         return super.onOptionsItemSelected(item);
     }
 
@@ -108,4 +111,5 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
+
 }
