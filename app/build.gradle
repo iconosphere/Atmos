@@ -39,4 +39,5 @@ dependencies {
     implementation 'android.arch.navigation:navigation-ui:1.0.0-alpha09'
 
 
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
 }
