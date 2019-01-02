@@ -95,7 +95,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         int id = item.getItemId();
 
         if (id == R.id.nav_home) {
-            // Handle the camera action
+            this.getSupportActionBar().show();
+            FragmentManager fragmentManager = getSupportFragmentManager();
+            fragmentManager.beginTransaction().replace(R.id.fragment_container, new MainFragment()).commit();
+            // TODO: Implement AddToBackStack for appropriate fragments
+
         } else if (id == R.id.nav_education){
             this.getSupportActionBar().show();
             FragmentManager fragmentManager = getSupportFragmentManager();
