@@ -36,13 +36,6 @@ public class MainFragment extends Fragment {
                     .fragment_container, new EducationFragment()).commit();
         });
 
-        Button buttonBlends = rootView.findViewById(R.id.button_blends);
-
-        buttonBlends.setOnClickListener(view -> {
-            FragmentManager fragmentManager = getFragmentManager();
-            fragmentManager.beginTransaction().replace(R.id
-                    .fragment_container, new CardViewTestFragment()).commit();
-        });
 
         return rootView;
     }
