@@ -18,7 +18,7 @@ public class CardViewFragment extends Fragment {
 
 
     public CardViewFragment(){
-        // Empty Fragment Constructor
+
     }
 
     @Nullable
