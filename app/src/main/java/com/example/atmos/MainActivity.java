@@ -105,7 +105,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             FragmentManager fragmentManager = getSupportFragmentManager();
             fragmentManager.beginTransaction().replace(R.id.fragment_container, new EducationFragment()).commit();
 
-        } else if (id == R.id.nav_share) {
+        } else if (id == R.id.nav_other) {
+            this.getSupportActionBar().show();
+            FragmentManager fragmentManager = getSupportFragmentManager();
+            fragmentManager.beginTransaction().replace(R.id.fragment_container, new BlendFragment()).commit();
 
         } else if (id == R.id.nav_send) {
 

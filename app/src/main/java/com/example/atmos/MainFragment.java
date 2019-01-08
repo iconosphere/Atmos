@@ -36,6 +36,18 @@ public class MainFragment extends Fragment {
                     .fragment_container, new EducationFragment()).commit();
         });
 
+        Button cardView = rootView.findViewById(R.id.button_blends);
+        cardView.setOnClickListener(view -> {
+            FragmentManager fragmentManager = getFragmentManager();
+            fragmentManager.beginTransaction().replace(R.id.fragment_container, new CardViewFragment()).commit();
+        });
+
+        Button recyclerViewButton = rootView.findViewById(R.id.button_other);
+        recyclerViewButton.setOnClickListener(view -> {
+            FragmentManager fragmentManager = getFragmentManager();
+            fragmentManager.beginTransaction().replace(R.id.fragment_container, new BlendFragment()).commit();
+        });
+
 
         return rootView;
     }

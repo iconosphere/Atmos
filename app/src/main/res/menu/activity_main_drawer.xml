@@ -13,6 +13,11 @@
             android:icon="@drawable/ic_drawer_education"
             android:title="Education" />
 
+        <item
+            android:id="@+id/nav_other"
+            android:icon="@drawable/ic_hot_tub"
+            android:title="Unspecified Other" />
+
     </group>
 
     <item android:title="Communicate">
