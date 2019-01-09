@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.transition.TransitionManager;
 
@@ -53,6 +54,11 @@ holder.itemView.setOnClickListener(new View.OnClickListener() {
         // Populate the textviews with data.
         holder.bindTo(currentBlend);
 
+        // This line checks if the item displayed on screen
+        // was expanded or not (Remembering the fact that Recycler View )
+        // reuses views so onBindViewHolder will be called for all
+        // items visible on screen.
+
         final boolean isExpanded = position == mExpandedPosition;
         holder.mDescriptionText.setVisibility(isExpanded?View.VISIBLE:View.GONE);
         holder.mDidYouKnowText.setVisibility(isExpanded?View.VISIBLE:View.GONE);
@@ -62,6 +68,7 @@ holder.itemView.setOnClickListener(new View.OnClickListener() {
 
 
         holder.itemView.setActivated(isExpanded);
+        // Click listener for every item in recyclerview
         holder.itemView.setOnClickListener(view -> {
             final boolean visibility = holder.mDescriptionText.getVisibility()==View.VISIBLE;
 
@@ -88,6 +95,15 @@ holder.itemView.setOnClickListener(new View.OnClickListener() {
             }
             TransitionManager.beginDelayedTransition(mRecyclerView);
         });
+        LinearLayoutManager manager = (LinearLayoutManager) mRecyclerView.getLayoutManager();
+        int distance;
+        View first = mRecyclerView.getChildAt(0);
+        int height = first.getHeight();
+        int current = mRecyclerView.getChildAdapterPosition(first);
+        int p = Math.abs(position - current);
+        if (p > 5) distance = (p - (p - 5)) * height;
+        else       distance = p * height;
+        manager.scrollToPositionWithOffset(position, distance);
     }
 
     @Override
