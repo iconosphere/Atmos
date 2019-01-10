@@ -4,6 +4,7 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -75,6 +76,8 @@ holder.itemView.setOnClickListener(new View.OnClickListener() {
             if (!visibility)
             {
                 holder.itemView.setActivated(true);
+                holder.mFavouriteButton.setVisibility(View.GONE);
+                holder.mShareButton.setVisibility(View.GONE);
                 holder.mDescriptionText.setVisibility(View.VISIBLE);
                 holder.mDidYouKnowText.setVisibility(View.VISIBLE);
                 if (mPreviousExpandedPosition!=-1 && mPreviousExpandedPosition!=position)
@@ -94,16 +97,12 @@ holder.itemView.setOnClickListener(new View.OnClickListener() {
                 holder.mDidYouKnowText.setVisibility(View.GONE);
             }
             TransitionManager.beginDelayedTransition(mRecyclerView);
+            if (holder.mFavouriteButton.getVisibility() == View.GONE) {
+                holder.mFavouriteButton.setVisibility(View.VISIBLE);
+                holder.mShareButton.setVisibility(View.VISIBLE);
+            }
         });
-        LinearLayoutManager manager = (LinearLayoutManager) mRecyclerView.getLayoutManager();
-        int distance;
-        View first = mRecyclerView.getChildAt(0);
-        int height = first.getHeight();
-        int current = mRecyclerView.getChildAdapterPosition(first);
-        int p = Math.abs(position - current);
-        if (p > 5) distance = (p - (p - 5)) * height;
-        else       distance = p * height;
-        manager.scrollToPositionWithOffset(position, distance);
+
     }
 
     @Override
@@ -123,6 +122,9 @@ holder.itemView.setOnClickListener(new View.OnClickListener() {
         private TextView mRecipeText;
         private TextView mDescriptionText;
         private TextView mDidYouKnowText;
+        private ImageView mFavouriteButton;
+        private ImageView mShareButton;
+
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -132,6 +134,9 @@ holder.itemView.setOnClickListener(new View.OnClickListener() {
             mRecipeText = itemView.findViewById(R.id.recipe);
             mDescriptionText = itemView.findViewById(R.id.description);
             mDidYouKnowText = itemView.findViewById(R.id.didYouKnow);
+            mFavouriteButton = itemView.findViewById(R.id.favouriteButton);
+            mShareButton = itemView.findViewById(R.id.shareButton);
+
         }
 
         void bindTo(Blend currentBlend) {

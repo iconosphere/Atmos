@@ -10,7 +10,9 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.LinearSnapHelper;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.recyclerview.widget.SnapHelper;
 
 import com.example.atmos.Blend;
 import com.example.atmos.R;
@@ -50,6 +52,9 @@ public class BlendFragment extends Fragment {
         // Initialise the adapter and set it to the RecyclerView.
         mAdapter = new BlendRecyclerViewAdapter(getContext(), mBlendData);
         mRecyclerView.setAdapter(mAdapter);
+
+        SnapHelper snapHelper = new LinearSnapHelper();
+        snapHelper.attachToRecyclerView(mRecyclerView);
 
         // Get the data.
         initializeData();
