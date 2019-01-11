@@ -3,6 +3,8 @@ package com.example.atmos;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
@@ -58,7 +60,7 @@ public class BlendFragment extends Fragment {
 
         // Get the data.
         initializeData();
-
+        setHasOptionsMenu(true);
         return rootView;
     }
 
@@ -83,4 +85,8 @@ public class BlendFragment extends Fragment {
 
     }
 
+    @Override
+    public void onCreateOptionsMenu(@NonNull Menu menu, @NonNull MenuInflater inflater) {
+        inflater.inflate(R.menu.search_menu, menu);
+    }
 }
