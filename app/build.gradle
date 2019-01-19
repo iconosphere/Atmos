@@ -36,7 +36,14 @@ dependencies {
     implementation 'androidx.cardview:cardview:1.0.0'
     implementation 'android.arch.navigation:navigation-fragment:1.0.0-alpha09'
     implementation 'android.arch.navigation:navigation-ui:1.0.0-alpha09'
-
-
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+
+    // ViewModel and LiveData
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.1.0-alpha01'
+    annotationProcessor 'androidx.lifecycle:lifecycle-compiler:2.1.0-alpha01'
+
+    // Room components
+    implementation "androidx.room:room-runtime:2.1.0-alpha03"
+    annotationProcessor "androidx.room:room-compiler:2.1.0-alpha03"
+    testImplementation "androidx.room:room-testing:2.1.0-alpha03"
 }
