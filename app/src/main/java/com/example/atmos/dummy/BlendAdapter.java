@@ -1,3 +1,4 @@
+/*
 package com.example.atmos.dummy;
 
 import android.content.Context;
@@ -7,6 +8,8 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.atmos.R;
 
 import java.util.List;
 
@@ -70,3 +73,4 @@ public class BlendAdapter extends RecyclerView.Adapter<BlendAdapter.ViewHolder> 
         }
     }
 }
+*/

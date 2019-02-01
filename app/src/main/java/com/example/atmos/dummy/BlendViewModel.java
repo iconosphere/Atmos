@@ -1,3 +1,4 @@
+/*
 package com.example.atmos.dummy;
 
 import android.app.Application;
@@ -24,3 +25,4 @@ public class BlendViewModel extends AndroidViewModel {
     }
 
 }
+*/

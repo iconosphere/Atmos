@@ -35,7 +35,7 @@ public class EducationFragment extends Fragment {
         Button essentialoils_button = rootView.findViewById(R.id.button_education_essentialoils);
         essentialoils_button.setOnClickListener(view -> {
             FragmentManager fragmentManager = getFragmentManager();
-            fragmentManager.beginTransaction().replace(R.id.fragment_container, new ViewPagerEducationEssentialOils()).commit();
+            fragmentManager.beginTransaction().replace(R.id.fragment_container, new EducationSustainability()).commit();
         });
 
         return rootView;

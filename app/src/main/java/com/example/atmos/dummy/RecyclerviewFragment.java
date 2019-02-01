@@ -1,3 +1,4 @@
+/*
 package com.example.atmos.dummy;
 
 import android.os.Bundle;
@@ -18,9 +19,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 
+*/
 /**
  * A simple {@link Fragment} subclass.
- */
+ *//*
+
 public class RecyclerviewFragment extends Fragment {
 
 
@@ -52,3 +55,4 @@ public class RecyclerviewFragment extends Fragment {
         return rootView;
     }
 }
+*/

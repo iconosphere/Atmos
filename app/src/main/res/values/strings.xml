@@ -17,6 +17,8 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="sustainable_spinner_long_text_default" />
+    <string name="sustainable_alternative_text_default">Sustainable Alternative</string>
 
     <string-array name="blend_names">
         <item>Floral / Woody</item>
@@ -70,5 +72,21 @@
         <item>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</item>
 
     </string-array>
+
+    <string-array name="blends_spinner">
+        <item>Instructions</item>
+        <item>Bergamot</item>
+        <item>Cinnamon</item>
+        <item>Eucalyptus</item>
+        <item>Grapefruit</item>
+        <item>Lemon</item>
+        <item>Patchouli</item>
+        <item>Rose</item>
+        <item>Rosewood</item>
+        <item>Tea Tree</item>
+    </string-array>
+
+    <string name="spinner_alternative1">Name of an alternative Essential Oil</string>
+    <string name="spinner_alternative1_long">Far longer description of alternative and further information not limited to or necessarily, problem with chosen Essential Oil, relevant history, pros of using the given alternative, etc. Far longer description of alternative and further information not limited to or necessarily, problem with chosen Essential Oil, relevant history, pros of using the given alternative, etc. Far longer description of alternative and further information not limited to or necessarily, problem with chosen Essential Oil, relevant history, pros of using the given alternative, etc.</string>
 
 </resources>

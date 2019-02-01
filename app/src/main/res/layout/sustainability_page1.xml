@@ -4,11 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    android:background="@color/backgroundWhite">
+    tools:context=".SustainabilityPage1">
 
-    <Button
-        android:id="@+id/button_education"
+    <Spinner
+        android:id="@+id/fragment_spinner"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -17,57 +16,41 @@
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
-        android:text="Education"
-        app:layout_constraintBottom_toTopOf="@+id/button_other"
-        app:layout_constraintEnd_toStartOf="@+id/button_blends"
+        android:spinnerMode="dialog"
+        app:layout_constraintBottom_toTopOf="@+id/sustainability_spinner_alternative_eo"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/button_blends"
+    <TextView
+        android:id="@+id/sustainability_spinner_alternative_eo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
-        android:layout_marginBottom="8dp"
-        android:text="Blends"
-        app:layout_constraintBottom_toTopOf="@+id/button_mycollection"
+        android:layout_marginBottom="32dp"
+        android:text="@string/sustainable_alternative_text_default"
+        app:layout_constraintBottom_toTopOf="@+id/sustainability_spinner_long_text"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/button_education"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/button_other"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginBottom="8dp"
-        android:text="Unspecified Other"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/button_mycollection"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_education" />
+        app:layout_constraintTop_toBottomOf="@+id/fragment_spinner" />
 
-    <Button
-        android:id="@+id/button_mycollection"
+    <TextView
+        android:id="@+id/sustainability_spinner_long_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
-        android:text="My Collection"
+        android:text="@string/sustainable_spinner_long_text_default"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/button_other"
-        app:layout_constraintTop_toBottomOf="@+id/button_blends" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sustainability_spinner_alternative_eo"
+        android:maxWidth="350dp"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
